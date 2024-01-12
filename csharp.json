@@ -1,0 +1,29 @@
+{
+    "Selector \"constant\"": {
+		"prefix": ["selector"],
+		"body": [
+			"private static readonly ISelector $1Selector",
+			"\t= new AutomationIdSelector(LookUp$0);",
+		],
+		"description": "Selector \"constant\""
+	},
+    "Automation properties": {
+		"prefix": ["automation properties"],
+		"body": [
+			"public const string $1Id = \"$UUID\";",
+	        "public const string $1Name = \"$0$1\";",
+		],
+		"description": "Automation properties"
+	},
+	"Sub-page object": {
+		"prefix": ["element", "sub-page object", "control"],
+		"body": [
+			"/// <summary>",
+			"/// Represents $0.",
+			"/// </summary>",
+			"public $1 $2",
+			"\t=> new(this, $3);",
+		],
+		"description": "Sub-page object"
+	},
+}

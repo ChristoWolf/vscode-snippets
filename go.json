@@ -1,0 +1,33 @@
+{
+	"Table-driven test": {
+		"prefix": ["test", "table", "func Test", "func test"],
+		"body": [
+			"func Test(t *testing.T) {",
+			"\tt.Parallel()",
+			"\tdata := map[string]struct{",
+			"\t\t$1",
+			"\t\t}{",
+			"\t\t$2",
+			"\t\t}",
+			"\tfor name, row := range data {",
+			"\t\trow := row",
+			"\t\tt.Run(name, func(t *testing.T) {",
+			"\t\t\tt.Parallel()",
+			"\t\t\t$0",
+			"\t\t\tt.Errorf(\"not implemented\")",
+			"\t\t})",
+			"\t}",
+			"}"
+		],
+		"description": "Table-driven test"
+	},
+	"Handle error": {
+		"prefix": ["err", "error", "if err"],
+		"body": [
+			"if err != nil {",
+			"\t$0",
+			"}"
+		],
+		"description": "Handle error"
+	},
+}
