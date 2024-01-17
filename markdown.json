@@ -1,0 +1,9 @@
+{
+	"Add note/warning": {
+		"prefix": ["note", "info", "warn"],
+		"body": [
+			"> :warning: **Important!**<br/>"
+		],
+		"description": "Add note/warning"
+	},
+}
