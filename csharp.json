@@ -1,29 +1,39 @@
 {
-    "Selector \"constant\"": {
-		"prefix": ["selector"],
+	"Selector \"constant\"": {
+		"prefix": [
+			"selector"
+		],
 		"body": [
 			"private static readonly ISelector $1Selector",
-			"\t= new AutomationIdSelector(${TM_FILENAME_BASE}LookUp.$1Id$0);",
+			"\t= new AutomationIdSelector(${TM_FILENAME_BASE}LookUp.${1/(.*)/${1:/capitalize}/}Id$2);",
 		],
 		"description": "Selector \"constant\""
 	},
-    "Automation properties": {
-		"prefix": ["automation properties"],
+	"Automation properties": {
+		"prefix": [
+			"automation properties"
+		],
 		"body": [
 			"public const string $1Id = \"$UUID\";",
-	        "public const string $1Name = \"$0$1\";",
+			"public const string $1Name = \"$0$1\";",
 		],
 		"description": "Automation properties"
 	},
 	"Automation ID only": {
-		"prefix": ["automation id"],
+		"prefix": [
+			"automation id"
+		],
 		"body": [
 			"public const string $1Id = \"$UUID\";"
 		],
 		"description": "Automation ID only"
 	},
 	"Sub-page object": {
-		"prefix": ["element", "sub-page object", "control"],
+		"prefix": [
+			"element",
+			"sub-page object",
+			"control"
+		],
 		"body": [
 			"/// <summary>",
 			"/// Represents $0.",
